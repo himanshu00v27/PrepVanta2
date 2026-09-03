@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/auth-guard.js"></script>
+
+    <title>Privacy Policy | PrepVanta</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/support.css">
+</head>
+
+<body>
+
+    <!-- Sidebar Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <h2>
+                <img src="assets/img/logo-icon.png" alt="PrepVanta logo" class="logo-icon"><span class="logo-text"><span class="prep">Prep</span><span class="vanta">Vanta</span></span>
+            </h2>
+        </div>
+
+        <div class="sidebar-section">
+
+            <h4>Dashboard</h4>
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-chart-line"></i>
+                Dashboard
+            </a>
+
+        </div>
+
+        <div class="sidebar-section">
+
+            <h4>Learning</h4>
+
+            <a href="topics.html">
+                <i class="fa-solid fa-book"></i>
+                Topics
+            </a>
+
+            <a href="aptitude.html">
+                <i class="fa-solid fa-calculator"></i>
+                Aptitude
+            </a>
+
+            <a href="reasoning.html">
+                <i class="fa-solid fa-brain"></i>
+                Reasoning
+            </a>
+
+            <a href="compiler.html">
+                <i class="fa-solid fa-terminal"></i>
+                Compiler
+            </a>
+
+            <a href="interview.html">
+                <i class="fa-solid fa-user-tie"></i>
+                Interview Practice
+            </a>
+
+            <a href="companies.html">
+                <i class="fa-solid fa-building"></i>
+                Companies
+            </a>
+
+        </div>
+
+        <div class="sidebar-section">
+
+            <h4>Community</h4>
+
+            <a href="search-users.html">
+                <i class="fa-solid fa-users"></i>
+                Search Users
+            </a>
+
+        </div>
+
+        <div class="sidebar-section">
+
+            <h4>Support</h4>
+
+            <a href="help-desk.html">
+                <i class="fa-solid fa-circle-question"></i>
+                Help Desk
+            </a>
+
+            <a href="contact-us.html">
+                <i class="fa-solid fa-phone"></i>
+                Contact Us
+            </a>
+
+        </div>
+
+        <div class="sidebar-section">
+
+            <h4>Account</h4>
+
+            <a href="login.html">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Login
+            </a>
+
+            <a href="#" class="logout-link" onclick="prepvantaLogout(); return false;">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="container nav-container">
+
+            <div class="nav-left">
+
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo-icon.png" alt="PrepVanta logo" class="logo-icon"><span class="logo-text"><span class="prep">Prep</span><span class="vanta">Vanta</span></span>
+                </a>
+
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+                <a href="aptitude.html">Aptitude</a>
+                <a href="reasoning.html">Reasoning</a>
+                <a href="topics.html">Topics</a>
+                <a href="compiler.html">Compiler</a>
+
+            </div>
+
+            <div class="nav-right">
+
+                <div class="search-box">
+                    <form onsubmit="event.preventDefault(); const q=this.q.value.trim(); location.href='topics.html'+(q?('?q='+encodeURIComponent(q)):'');">
+                        <input type="text" name="q" placeholder="Search topics...">
+                        <i class="fa-solid fa-search"></i>
+                    </form>
+                </div>
+
+                <button class="theme-toggle">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <a href="dashboard.html" class="profile-btn" style="display:flex;align-items:center;justify-content:center;text-decoration:none;">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <section class="support-page">
+        <div class="container">
+            <div class="legal-card">
+                <h1>Privacy Policy</h1>
+                <p class="updated">Last updated: 24 August 2026</p>
+                <p>PrepVanta ("we", "our", "us") built this platform to help students prepare for placements. This policy explains what information we collect, how we use it, and the choices you have.</p>
+
+                <h2>1. Information We Collect</h2>
+                <ul>
+                    <li>Account details you provide: full name, username, email address or phone number, and password.</li>
+                    <li>Activity data: questions attempted, mock test scores, topics viewed and compiler usage, used to build your dashboard.</li>
+                    <li>Your PrepVanta user ID, generated automatically and used to identify your account across the platform.</li>
+                </ul>
+
+                <h2>2. How We Use Your Information</h2>
+                <ul>
+                    <li>To operate your account, save your progress and personalise your dashboard.</li>
+                    <li>To let other learners find your public profile by username or user ID.</li>
+                    <li>To improve question quality and platform performance.</li>
+                </ul>
+
+                <h2>3. Sharing &amp; Visibility</h2>
+                <p>Your username, full name and user ID are visible to other registered users through the Find Users search. We do not sell your personal information to third parties.</p>
+
+                <h2>4. Data Security</h2>
+                <p>We apply reasonable technical safeguards to protect your data. No online platform can guarantee absolute security, so please use a strong, unique password.</p>
+
+                <h2>5. Your Choices</h2>
+                <p>You can update your profile details from your dashboard at any time, or contact the Help Desk to request account deletion.</p>
+
+                <h2>6. Contact Us</h2>
+                <p>Questions about this policy? Reach us at support@prepvanta.in or +91 98765 43210.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <h2 class="footer-logo">
+                        <img src="assets/img/logo-icon.png" alt="PrepVanta logo" class="logo-icon"><span class="logo-text"><span class="prep">Prep</span><span class="vanta">Vanta</span></span>
+                    </h2>
+
+                    <p>
+                        Learn. Practice. Succeed.
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <h4>Quick Links</h4>
+
+                    <a href="topics.html">Topics</a>
+                    <a href="aptitude.html">Aptitude</a>
+                    <a href="reasoning.html">Reasoning</a>
+                    <a href="compiler.html">Compiler</a>
+                    <a href="companies.html">Companies</a>
+
+                </div>
+
+                <div>
+
+                    <h4>Support</h4>
+
+                    <a href="help-desk.html">Help Desk</a>
+                    <a href="contact-us.html">Contact Us</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+
+                </div>
+
+                <div>
+
+                    <h4>Connect</h4>
+
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Instagram</a>
+
+                </div>
+
+            </div>
+
+            <div class="copyright">
+
+                © 2026 PrepVanta. All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+<script src="js/sidebar.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>

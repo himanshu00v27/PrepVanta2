@@ -1,0 +1,53 @@
+:root {
+
+    /* Brand */
+
+    --primary: #4F46E5;
+    --secondary: #4338CA;
+    --accent: #6366F1;
+    --danger: #DC2626;
+
+    /* Success */
+
+    --success: #22C55E;
+    --warning: #EAB308;
+
+    /* Background */
+
+    --bg: #F3F4FD;
+    --card: #FFFFFF;
+
+    /* Text */
+
+    --text: #111827;
+    --text-light: #6B7280;
+
+    /* Border */
+
+    --border: #E5E7EB;
+
+    /* Shadow */
+
+    --shadow:
+        0 12px 32px rgba(31, 41, 55, .10);
+
+    /* Gradient */
+
+    --gradient:
+        linear-gradient(
+            135deg,
+            #4338CA,
+            #4F46E5
+        );
+}
+
+[data-theme="dark"] {
+
+    --bg:#0F172A;
+    --card:#1E293B;
+
+    --text:#F8FAFC;
+    --text-light:#CBD5E1;
+
+    --border:#334155;
+}

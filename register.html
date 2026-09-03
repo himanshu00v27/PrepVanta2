@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | PrepVanta</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+    <!-- Sidebar Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <h2>
+                <img src="assets/img/logo-icon.png" alt="PrepVanta logo" class="logo-icon"><span class="logo-text"><span class="prep">Prep</span><span class="vanta">Vanta</span></span>
+            </h2>
+        </div>
+
+        <div class="sidebar-section">
+
+            <h4>Dashboard</h4>
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-chart-line"></i>
+                Dashboard
+            </a>
+
+        </div>
+
+        <div class="sidebar-section">
+
+            <h4>Learning</h4>
+
+            <a href="topics.html">
+                <i class="fa-solid fa-book"></i>
+                Topics
+            </a>
+
+            <a href="aptitude.html">
+                <i class="fa-solid fa-calculator"></i>
+                Aptitude
+            </a>
+
+            <a href="reasoning.html">
+                <i class="fa-solid fa-brain"></i>
+                Reasoning
+            </a>
+
+            <a href="compiler.html">
+                <i class="fa-solid fa-terminal"></i>
+                Compiler
+            </a>
+
+            <a href="interview.html">
+                <i class="fa-solid fa-user-tie"></i>
+                Interview Practice
+            </a>
+
+            <a href="companies.html">
+                <i class="fa-solid fa-building"></i>
+                Companies
+            </a>
+
+        </div>
+
+        <div class="sidebar-section">
+
+            <h4>Community</h4>
+
+            <a href="search-users.html">
+                <i class="fa-solid fa-users"></i>
+                Search Users
+            </a>
+
+        </div>
+
+        <div class="sidebar-section">
+
+            <h4>Support</h4>
+
+            <a href="help-desk.html">
+                <i class="fa-solid fa-circle-question"></i>
+                Help Desk
+            </a>
+
+            <a href="contact-us.html">
+                <i class="fa-solid fa-phone"></i>
+                Contact Us
+            </a>
+
+        </div>
+
+        <div class="sidebar-section">
+
+            <h4>Account</h4>
+
+            <a href="login.html">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Login
+            </a>
+
+            <a href="#" class="logout-link" onclick="prepvantaLogout(); return false;">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="container nav-container">
+
+            <div class="nav-left">
+
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo-icon.png" alt="PrepVanta logo" class="logo-icon"><span class="logo-text"><span class="prep">Prep</span><span class="vanta">Vanta</span></span>
+                </a>
+
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+                <a href="aptitude.html">Aptitude</a>
+                <a href="reasoning.html">Reasoning</a>
+                <a href="topics.html">Topics</a>
+                <a href="compiler.html">Compiler</a>
+
+            </div>
+
+            <div class="nav-right">
+
+                <div class="search-box">
+                    <form onsubmit="event.preventDefault(); const q=this.q.value.trim(); location.href='topics.html'+(q?('?q='+encodeURIComponent(q)):'');">
+                        <input type="text" name="q" placeholder="Search topics...">
+                        <i class="fa-solid fa-search"></i>
+                    </form>
+                </div>
+
+                <button class="theme-toggle">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <a href="dashboard.html" class="profile-btn" style="display:flex;align-items:center;justify-content:center;text-decoration:none;">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <section class="auth-page">
+        <div class="container">
+            <div class="auth-grid">
+                <div class="auth-visual">
+                    <a href="index.html" class="logo"><img src="assets/img/logo-icon.png" alt="PrepVanta logo" class="logo-icon"><span class="logo-text"><span class="prep">Prep</span><span class="vanta">Vanta</span></span></a>
+                    <blockquote>
+                        "Everything I needed for placements was finally in one login."
+                        <div class="auth-quote-by">— A PrepVanta learner, placed at a Tier-1 firm</div>
+                    </blockquote>
+                    <div style="opacity:.85;font-size:.85rem;">Join thousands already preparing smarter.</div>
+                </div>
+                <div class="auth-form-wrap">
+                    <div class="auth-switch">
+                        <a href="login.html">Log In</a>
+                        <a href="register.html" class="active">Sign Up</a>
+                    </div>
+                    <h1>Create Your Account</h1>
+                    <p class="sub">Just a full name, a username and a way to reach you.</p>
+
+                    <div class="userid-box" id="useridBox">
+                        <p>Your PrepVanta User ID</p>
+                        <div class="uid" id="useridValue">--------</div>
+                    </div>
+
+                    <form id="registerForm" novalidate>
+                        <div class="form-group" id="fg-fullname">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="e.g. Ananya Iyer">
+                            <span class="form-error">Enter your full name.</span>
+                        </div>
+                        <div class="form-group" id="fg-username">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" placeholder="Unique — e.g. ananya_i">
+                            <small>4-20 characters. This is how other users will find you.</small>
+                            <span class="form-error">This username isn't available.</span>
+                        </div>
+                        <div class="form-group" id="fg-contact">
+                            <label for="contact">Email or Phone Number</label>
+                            <input type="text" id="contact" placeholder="you@email.com or 98765 43210">
+                            <span class="form-error">Enter a valid email or 10-digit phone number.</span>
+                        </div>
+                        <div class="form-group" id="fg-password">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="At least 6 characters">
+                            <span class="form-error">Use at least 6 characters.</span>
+                        </div>
+                        <div class="form-check" id="fg-terms">
+                            <input type="checkbox" id="agreeTerms" style="margin-top:3px;">
+                            <span>I agree to the <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy-policy.html">Privacy Policy</a>.</span>
+                        </div>
+                        <span class="form-error" id="termsError" style="display:none;margin:-14px 0 18px;">You must agree to the Terms &amp; Conditions and Privacy Policy to continue.</span>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Create Account</button>
+                        <button type="button" id="continueBtn" class="btn btn-primary" style="width:100%;display:none;">Continue to Dashboard</button>
+                    </form>
+                    <p class="auth-footer-text">Already have an account? <a href="login.html">Log in</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <h2 class="footer-logo">
+                        <img src="assets/img/logo-icon.png" alt="PrepVanta logo" class="logo-icon"><span class="logo-text"><span class="prep">Prep</span><span class="vanta">Vanta</span></span>
+                    </h2>
+
+                    <p>
+                        Learn. Practice. Succeed.
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <h4>Quick Links</h4>
+
+                    <a href="topics.html">Topics</a>
+                    <a href="aptitude.html">Aptitude</a>
+                    <a href="reasoning.html">Reasoning</a>
+                    <a href="compiler.html">Compiler</a>
+                    <a href="companies.html">Companies</a>
+
+                </div>
+
+                <div>
+
+                    <h4>Support</h4>
+
+                    <a href="help-desk.html">Help Desk</a>
+                    <a href="contact-us.html">Contact Us</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+
+                </div>
+
+                <div>
+
+                    <h4>Connect</h4>
+
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Instagram</a>
+
+                </div>
+
+            </div>
+
+            <div class="copyright">
+
+                © 2026 PrepVanta. All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+<script src="js/sidebar.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+
+</html>

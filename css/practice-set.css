@@ -1,0 +1,96 @@
+/* ===================================
+   PRACTICE SET PAGE (generic question view)
+=================================== */
+
+.practice-set-page{
+    padding:50px 0 100px;
+}
+
+.pset-breadcrumb{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:.85rem;
+    color:var(--text-light);
+    margin-bottom:18px;
+    flex-wrap:wrap;
+}
+
+.pset-breadcrumb a{
+    color:var(--text-light);
+    text-decoration:none;
+}
+
+.pset-breadcrumb a:hover{
+    color:var(--primary);
+}
+
+.pset-breadcrumb .current{
+    color:var(--text);
+    font-weight:600;
+}
+
+.pset-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:28px;
+}
+
+.pset-head h1{
+    font-size:2rem;
+    margin-bottom:6px;
+}
+
+.pset-head p{
+    color:var(--text-light);
+}
+
+.sample-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:#FEF3C7;
+    color:#B45309;
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:.75rem;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.dev-note{
+    background:var(--card);
+    border:1.5px dashed var(--border);
+    border-radius:20px;
+    padding:22px 26px;
+    margin-top:30px;
+}
+
+.dev-note h4{
+    font-size:.85rem;
+    margin-bottom:6px;
+    color:var(--text-light);
+    text-transform:uppercase;
+    letter-spacing:.04em;
+}
+
+.dev-note p{
+    color:var(--text-light);
+    font-size:.85rem;
+    line-height:1.6;
+}
+
+.dev-note code{
+    background:var(--bg);
+    padding:2px 8px;
+    border-radius:6px;
+    font-size:.8rem;
+}
+
+[data-theme="dark"] .sample-badge{
+    background:rgba(234,179,8,.15);
+    color:#EAB308;
+}

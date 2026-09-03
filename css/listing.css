@@ -1,0 +1,119 @@
+/* ===================================
+   LISTING PAGES (Reasoning / Aptitude / Topics)
+   Category grid that links into practice-set.html
+=================================== */
+
+.listing-page{
+    padding:60px 0 100px;
+}
+
+.listing-page > .container > h1{
+    font-size:2.2rem;
+    margin-bottom:8px;
+}
+
+.listing-page > .container > p.sub{
+    color:var(--text-light);
+    margin-bottom:35px;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.category-card{
+    background:var(--card);
+    padding:28px 24px;
+    border-radius:22px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+    text-decoration:none;
+    color:var(--text);
+    display:block;
+    border:1.5px solid var(--border);
+}
+
+.category-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--primary);
+}
+
+.category-icon{
+    width:52px;
+    height:52px;
+    border-radius:14px;
+    background:var(--gradient);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.25rem;
+    margin-bottom:16px;
+}
+
+.category-card:nth-child(3n) .category-icon{
+    background:linear-gradient(135deg,#B91C1C,#DC2626);
+}
+
+.category-card h3{
+    font-size:1rem;
+    margin-bottom:6px;
+}
+
+.category-card p{
+    color:var(--text-light);
+    font-size:.82rem;
+}
+
+.category-card .cta{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:14px;
+    font-size:.82rem;
+    font-weight:700;
+    color:var(--primary);
+}
+
+.category-card:hover .cta i{
+    transform:translateX(3px);
+}
+
+.category-card .cta i{
+    transition:.2s;
+    font-size:.75rem;
+}
+
+.section-divider{
+    margin:45px 0 25px;
+}
+
+.section-divider h2{
+    font-size:1.3rem;
+}
+
+.section-divider p{
+    color:var(--text-light);
+    font-size:.88rem;
+    margin-top:4px;
+}
+
+@media(max-width:1100px){
+    .category-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:800px){
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:520px){
+    .category-grid{
+        grid-template-columns:1fr;
+    }
+}

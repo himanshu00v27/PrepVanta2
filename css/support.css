@@ -1,0 +1,248 @@
+/* ===================================
+   SUPPORT PAGES (Help Desk / Contact / Search / Legal)
+=================================== */
+
+.support-page{
+    padding:60px 0 100px;
+}
+
+.page-head{
+    margin-bottom:30px;
+}
+
+.page-head h1{
+    font-size:2.2rem;
+}
+
+.page-head p{
+    color:var(--text-light);
+    margin-top:8px;
+}
+
+.help-hero{
+    text-align:center;
+    max-width:620px;
+    margin:0 auto 50px;
+}
+
+.help-hero h1{
+    font-size:2.2rem;
+    margin-bottom:8px;
+}
+
+.help-hero p{
+    color:var(--text-light);
+}
+
+.help-hero input{
+    width:100%;
+    padding:18px 22px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
+    margin-top:22px;
+    background:var(--card);
+    color:var(--text);
+    outline:none;
+}
+
+.help-hero input:focus{
+    border-color:var(--primary);
+}
+
+.contact-tiles{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+    margin-bottom:55px;
+}
+
+.contact-tile{
+    background:var(--card);
+    padding:26px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    border:1.5px solid var(--border);
+}
+
+.contact-tile .ic{
+    width:44px;
+    height:44px;
+    border-radius:12px;
+    background:#EEF2FF;
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    font-size:1.1rem;
+}
+
+.contact-tile h4{
+    font-size:.95rem;
+    margin-bottom:4px;
+}
+
+.contact-tile p{
+    color:var(--text-light);
+    font-size:.85rem;
+    line-height:1.5;
+}
+
+.faq-card{
+    background:var(--card);
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    padding:6px 30px;
+    border:1.5px solid var(--border);
+}
+
+.faq-item{
+    border-bottom:1px solid var(--border);
+}
+
+.faq-item:last-child{
+    border-bottom:none;
+}
+
+.faq-item summary{
+    padding:20px 0;
+    font-weight:600;
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.faq-item summary::-webkit-details-marker{
+    display:none;
+}
+
+.faq-item summary::after{
+    content:'+';
+    font-size:1.4rem;
+    color:var(--text-light);
+}
+
+.faq-item[open] summary::after{
+    content:'\2212';
+    color:var(--primary);
+}
+
+.faq-item p{
+    padding-bottom:20px;
+    color:var(--text-light);
+    line-height:1.6;
+}
+
+.contact-form-card{
+    background:var(--card);
+    padding:45px;
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    max-width:640px;
+    margin:0 auto;
+    border:1.5px solid var(--border);
+}
+
+.contact-form-card textarea{
+    width:100%;
+    min-height:130px;
+    resize:vertical;
+    font-family:inherit;
+}
+
+.legal-card{
+    background:var(--card);
+    padding:50px;
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    max-width:800px;
+    margin:0 auto;
+    border:1.5px solid var(--border);
+}
+
+.legal-card .updated{
+    color:var(--text-light);
+    font-size:.85rem;
+    margin-bottom:30px;
+}
+
+.legal-card h2{
+    margin:30px 0 14px;
+    font-size:1.25rem;
+}
+
+.legal-card p,
+.legal-card li{
+    color:var(--text-light);
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+.legal-card ul{
+    margin-left:22px;
+}
+
+.user-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.user-result{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    background:var(--card);
+    padding:20px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    border:1.5px solid var(--border);
+}
+
+.user-result .avatar{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:var(--gradient);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+.user-result .u-name{
+    font-weight:600;
+    font-size:.92rem;
+}
+
+.user-result .u-meta{
+    color:var(--text-light);
+    font-size:.78rem;
+    font-family:monospace;
+    margin-top:2px;
+}
+
+@media(max-width:900px){
+    .contact-tiles{
+        grid-template-columns:1fr;
+    }
+    .user-grid{
+        grid-template-columns:1fr;
+    }
+    .legal-card,
+    .contact-form-card{
+        padding:30px;
+    }
+}
+
+[data-theme="dark"] .contact-tile .ic{
+    background:rgba(79,70,229,.18);
+}

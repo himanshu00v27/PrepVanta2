@@ -25,20 +25,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Inspect frontend
-        run: |
-          echo "Frontend files:"
-          find frontend -type f -print
-          echo "Total files:"
-          find frontend -type f | wc -l
-
       - name: Upload frontend
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './frontend'
 
